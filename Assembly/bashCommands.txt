@@ -1,0 +1,7 @@
+    1  gdb-multiarch main.elf "target remote localhost:1234" -ex "break _start" -ex "continue" -q
+    2  riscv64-unknown-elf-objcopy -0 binary main.elf main.bin 
+    3  clear
+    4  riscv64-unknown-elf-objcopy -o binary main.elf main.bin 
+    5  riscv64-unknown-elf-objcopy -O binary main.elf main.bin 
+    6  clear
+    7  history >> bashCommands.txt
